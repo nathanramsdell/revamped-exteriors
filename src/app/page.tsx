@@ -1,4 +1,7 @@
+"use client";
 import { Button } from '@/components/ui/button';
+
+import { Calendar } from '@/components/ui/calendar';
 
 export default function Home() {
   return (
@@ -14,9 +17,20 @@ export default function Home() {
         </p>
         <div className="mt-10 flex items-center gap-4">
           <Button size="lg">Get a Free Quote</Button>
+          <Button size="default" variant="outline">
+            Get a Free Quote
+          </Button>
+          <Button size="lg">Get a Free Quote</Button>
           <Button variant="outline" size="lg">
             Our Services
           </Button>
+           <Calendar 
+      mode="single"
+      selected={new Date()}
+      onSelect={(date) => console.log(date)}
+      className="rounded-lg border"
+      captionLayout="dropdown"
+    />
         </div>
       </section>
     </div>
